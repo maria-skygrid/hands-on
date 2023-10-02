@@ -1,4 +1,4 @@
-function Form(): JSX.Element {
+const Form = (): JSX.Element => {
   return (
     <form>
       <input type="text" placeholder="Item name"/>

@@ -1,4 +1,4 @@
-function Item (): JSX.Element {
+const Item = (): JSX.Element => {
   return (
     <div>
       <p>Item title</p>

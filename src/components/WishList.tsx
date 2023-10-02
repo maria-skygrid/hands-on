@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-function WishList (): JSX.Element {
+const WishList = (): JSX.Element => {
   return (
     <div>
       <h1>Wishlist</h1>

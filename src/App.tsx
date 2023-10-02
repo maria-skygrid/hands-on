@@ -2,7 +2,7 @@ import './App.css';
 import WishList from './components/WishList';
 import Form from './components/Form'; 
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
