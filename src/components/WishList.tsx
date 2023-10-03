@@ -1,8 +1,16 @@
 import Item from "./Item";
 
 const WishList = (): JSX.Element => {
+  
+  interface Item {
+    id: number, 
+    product: string
+    price: number,
+    link: string,
+    img: string
+  }
 
-  const items = [
+  const items: Item[] = [
     {
       id: 1, 
       product: "chair", 
@@ -18,7 +26,7 @@ const WishList = (): JSX.Element => {
       img: "https://c.p02.c4a.im/images/item/15827002/6f7ecd48131d456494d6e3eaf756b53021fdea73ee2ef342dbe5d338efeb5a78?d=583x585"
     }
   ]
-  
+
   return (
     <div>
       <h1>Wishlist</h1>
