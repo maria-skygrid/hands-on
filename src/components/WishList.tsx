@@ -1,14 +1,14 @@
 import Item from "./Item";
 
+interface Item {
+  id: number, 
+  product: string
+  price: number,
+  link: string,
+  img: string
+}
+
 const WishList = (): JSX.Element => {
-  
-  interface Item {
-    id: number, 
-    product: string
-    price: number,
-    link: string,
-    img: string
-  }
 
   const items: Item[] = [
     {
