@@ -1,4 +1,4 @@
-interface ItemProps {
+type ItemProps = {
   product: string
   price: number,
   link: string,

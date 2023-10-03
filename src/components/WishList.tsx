@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-interface Item {
+type Item = {
   id: number, 
   product: string
   price: number,
