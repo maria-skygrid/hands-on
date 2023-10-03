@@ -18,7 +18,6 @@ const Form = ({
   const { register, handleSubmit } = useForm<FormData>();
 
   const onFormSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data); 
     formSubmit(data)
   }
 
