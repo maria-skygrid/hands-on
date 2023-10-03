@@ -7,12 +7,19 @@ type FormData = {
   image: string
 }
 
-const Form = (): JSX.Element => {
+type FormProps = {
+  formSubmit: SubmitHandler<FormData>
+}
+
+const Form = ({
+  formSubmit
+}: FormProps) => {
 
   const { register, handleSubmit } = useForm<FormData>();
 
   const onFormSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data); 
+    formSubmit(data)
   }
 
   return (
