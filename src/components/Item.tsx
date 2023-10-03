@@ -1,14 +1,16 @@
 interface ItemProps {
-  data: {
-    product: string
-    price: number,
-    link: string,
-    img: string  
-  }
+  product: string
+  price: number,
+  link: string,
+  img: string  
 }
 
-const Item = ({data}: ItemProps): JSX.Element => {
-  const { product, price, link, img } = data
+const Item = ({
+  product, 
+  price, 
+  link, 
+  img
+}: ItemProps) => {
   return (
     <div>
       <p>{product}</p>
