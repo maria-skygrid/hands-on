@@ -30,17 +30,15 @@ const WishList = (): JSX.Element => {
   return (
     <div>
       <h1>Wishlist</h1>
-      {items.map((item) => {
-        return ( 
-          <Item 
-            key={item.id}
-            product={item.product}
-            price={item.price}
-            link={item.link}
-            img={item.img}
-          />
-        ) 
-      })}
+      {items.map((item) => (
+        <Item 
+          key={item.id}
+          product={item.product}
+          price={item.price}
+          link={item.link}
+          img={item.img}
+        />
+      ))}
     </div>
   )
 }
