@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/input.css'
 import WishList from './components/WishList';
 import Form from './components/Form'; 
 import { useState } from 'react';
