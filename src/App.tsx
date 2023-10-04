@@ -2,25 +2,25 @@ import './App.css';
 import WishList from './components/WishList';
 import Form from './components/Form'; 
 import { useState } from 'react';
+import { FormData } from './components/Form';
 
-type Item = {
-  id?: number,
-  name: string, 
-  price: number,
-  link: string,
-  image: string
-}
+// type Item = {
+//   name: string, 
+//   price: number,
+//   link: string,
+//   image: string
+// }
 
 const App = () => {
-  const [items, setItems] = useState<Item[]>([])
+  const [items, setItems] = useState<FormData[]>([])
 
-  const addItem = (data: Item) => {
+  const addItem = ({name, price, link, image}: FormData) => {
     const newItem = {
       id: items.length + 1,
-      name: data.name,
-      price: data.price,
-      link: data.link,
-      image: data.image
+      name: name,
+      price: price,
+      link: link,
+      image: image
     }
     setItems([...items, newItem])
   }

@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
-type FormData = {
+export type FormData = {
   name: string, 
   price: number,
   link: string,
