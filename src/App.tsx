@@ -4,13 +4,6 @@ import Form from './components/Form';
 import { useState } from 'react';
 import { FormData } from './components/Form';
 
-// type Item = {
-//   name: string, 
-//   price: number,
-//   link: string,
-//   image: string
-// }
-
 const App = () => {
   const [items, setItems] = useState<FormData[]>([])
 

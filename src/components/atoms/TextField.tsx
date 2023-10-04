@@ -1,17 +1,18 @@
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { forwardRef } from 'react'
 
 type TextFieldProps = {
-  type: string, 
   placeholder: string, 
-  name: string, 
-  register: UseFormRegister<FieldValues>;
+  label: string, 
+  type?: string, 
 }
 
-const TextField = ({type, placeholder, name, register}: TextFieldProps) => {
-
+const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({ label, type, ...props }, ref) => {
   return (
-    <input type={type} placeholder={placeholder} {...register(name)} />
+    <div>
+      <label>{label}</label>
+      <input ref={ref} type={type} {...props}/>
+    </div>
   )
-}
+})
 
 export default TextField;
