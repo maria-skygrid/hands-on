@@ -1,5 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import TextField from "./atoms/TextField";
+import { useContext } from "react";
+import { ItemContext } from "../context/Item";
 
 export type FormData = {
   name: string, 
@@ -8,19 +10,13 @@ export type FormData = {
   image: string
 }
 
-type FormProps = {
-  formSubmit: SubmitHandler<FormData>
-}
-
-const Form = ({
-  formSubmit
-}: FormProps) => {
+const Form = () => {
 
   const { register, handleSubmit } = useForm<FormData>();
+  const { addItem } = useContext(ItemContext)
 
   const onFormSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
-    formSubmit(data)
+    addItem(data)
   }
 
   return (
