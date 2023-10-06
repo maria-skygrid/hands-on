@@ -24,35 +24,37 @@ const Form = ({
   }
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)}>
-      {/* <input {...register("name")} type="text" placeholder="Item name"/> */}
-      <TextField 
-        label="Item name"
-        placeholder="Item name"
-        {...register("name")}
-      />
+    <form onSubmit={handleSubmit(onFormSubmit)}
+    className="text-sm md:w-[26%] lg:w-1/5 p-3 bg-slate-200 items-center">
       
-      {/* <input {...register("price")} type="number" placeholder="Item price"/> */}
-      <TextField 
-        label="Item price"
-        placeholder="Item price"
-        type="number"
-        {...register("price")}
-      />
-      
-      {/* <input {...register("link")} type="text" placeholder="Item link" /> */}
-      <TextField 
-        label="🔗"
-        placeholder="Item link"
-        {...register("link")}
-      />
+      <div className="flex flex-wrap">
+        <TextField 
+          label="Item name"
+          placeholder="Item name"
+          {...register("name")}
+        />
+        
+        <TextField 
+          label="Item price"
+          placeholder="Item price"
+          type="number"
+          {...register("price")}
+        />
+      </div>
 
-      {/* <input {...register("image")} type="text" placeholder="Item image" /> */}
-      <TextField 
-        label="Image URL"
-        placeholder="Image URL"
-        {...register("image")}        
-      />
+      <div className="flex flex-wrap">
+        <TextField 
+          label="Item link"
+          placeholder="Item link"
+          {...register("link")}
+        />
+
+        <TextField 
+          label="Image URL"
+          placeholder="Image URL"
+          {...register("image")}        
+        />
+      </div>
       <button type="submit">Add Item</button>
     </form>
   )
