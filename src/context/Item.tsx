@@ -13,7 +13,12 @@ export type ItemContextType = {
 	addItem: (item: ListItem) => void
 }
 
-export const ItemContext = createContext<ItemContextType>({} as ItemContextType)
+const defaultItemContext = {
+	itemList: [], 
+	addItem: () => undefined
+}
+
+export const ItemContext = createContext<ItemContextType>(defaultItemContext)
 
 export const ItemProvider = ({children}: { children: React.ReactNode }) => {
 
@@ -45,13 +50,13 @@ export const ItemProvider = ({children}: { children: React.ReactNode }) => {
     setItemList([...itemList, newItem])
   }
 
-	const toShare = {
+	const ItemContextValue = {
 		itemList: itemList, 
 		addItem: addItem
 	}
 
 	return (
-    <ItemContext.Provider value={toShare} >
+    <ItemContext.Provider value={ItemContextValue} >
       {children}
     </ItemContext.Provider>
   )
