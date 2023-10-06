@@ -1,7 +1,6 @@
 import Item from "./Item";
 import { useContext } from "react";
 import { ItemContext } from "../context/Item";
-import { ItemContextType } from "../context/Item";
 
 // type Item = {
 //   id?: number,
@@ -16,7 +15,7 @@ import { ItemContextType } from "../context/Item";
 // }
 
 const WishList = () => {
-  const { itemList } = useContext<ItemContextType>(ItemContext)
+  const { itemList } = useContext(ItemContext)
 
   return (
     <div>
