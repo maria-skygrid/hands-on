@@ -9,7 +9,7 @@ const WishList = () => {
     <div className="p-5 overflow-y-auto">
       <h1 className="text-lg font-bold">Wishlist</h1>
       <div className="flex flex-wrap">
-        {items.map((item) => {
+        {itemList.map((item) => {
           return ( 
             <Item 
               key={item.id}
