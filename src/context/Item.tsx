@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
 
-export type ListItem = {
+type ListItem = {
 	id?: number, 
 	name: string, 
 	price: number, 
@@ -8,7 +8,7 @@ export type ListItem = {
 	image: string
 }
 
-export type ItemContextType = {
+type ItemContextType = {
 	itemList: ListItem[],
 	addItem: (item: ListItem) => void
 }
