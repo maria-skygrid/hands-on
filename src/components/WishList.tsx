@@ -2,18 +2,6 @@ import Item from "./Item";
 import { useContext } from "react";
 import { ItemContext } from "../context/Item";
 
-// type Item = {
-//   id?: number,
-//   name: string, 
-//   price: number,
-//   link: string,
-//   image: string
-// }
-
-// type WishListProps = {
-//   items: Item[]
-// }
-
 const WishList = () => {
   const { itemList } = useContext(ItemContext)
 
