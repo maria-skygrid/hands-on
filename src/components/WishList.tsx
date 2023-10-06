@@ -6,19 +6,21 @@ const WishList = () => {
   const { itemList } = useContext(ItemContext)
 
   return (
-    <div>
-      <h1>Wishlist</h1>
-      {itemList.map((item) => {
-        return ( 
-          <Item 
-            key={item.id}
-            product={item.name}
-            price={item.price}
-            link={item.link}
-            img={item.image}
-          />
-        ) 
-      })}
+    <div className="p-5 overflow-y-auto">
+      <h1 className="text-lg font-bold">Wishlist</h1>
+      <div className="flex flex-wrap">
+        {items.map((item) => {
+          return ( 
+            <Item 
+              key={item.id}
+              product={item.name}
+              price={item.price}
+              link={item.link}
+              img={item.image}
+            />
+          ) 
+        })}
+      </div>
     </div>
   )
 }
