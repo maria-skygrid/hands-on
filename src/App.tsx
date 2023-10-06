@@ -20,8 +20,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Form formSubmit={addItem}/>
-      <WishList items={items}/>
+      <Form />
+      <WishList />
     </div>
   );
 }

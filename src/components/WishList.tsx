@@ -1,23 +1,27 @@
 import Item from "./Item";
+import { useContext } from "react";
+import { ItemContext } from "../context/Item";
+import { ItemContextType } from "../context/Item";
 
-type Item = {
-  id?: number,
-  name: string, 
-  price: number,
-  link: string,
-  image: string
-}
+// type Item = {
+//   id?: number,
+//   name: string, 
+//   price: number,
+//   link: string,
+//   image: string
+// }
 
-type WishListProps = {
-  items: Item[]
-}
+// type WishListProps = {
+//   items: Item[]
+// }
 
-const WishList = ({items}: WishListProps): JSX.Element => {
+const WishList = () => {
+  const { itemList } = useContext<ItemContextType>(ItemContext)
 
   return (
     <div>
       <h1>Wishlist</h1>
-      {items.map((item) => {
+      {itemList.map((item) => {
         return ( 
           <Item 
             key={item.id}
